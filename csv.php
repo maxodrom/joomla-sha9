@@ -64,7 +64,7 @@ if (($handle = @fopen($sourceFile, "r")) !== false) {
 				if (!in_array($k + 1, $columnsToSearch)) {
 					continue;
 				}
-				if (false !== mb_stristr($v, $q)) {
+				if (false !== mb_stristr($v, $q, false, 'UTF-8')) {
 					$hitRows[] = $row;
 					++$hits;
 				}
